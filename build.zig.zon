@@ -1,14 +1,16 @@
 .{
-    .name = "SDL_image",
+    .name = .SDL_image,
     .version = "2.8.4",
+    .fingerprint = 0x7d6df3671d68a2f9,
+    .minimum_zig_version = "0.14.0",
     .dependencies = .{
-        .sdl = .{
-            .url = "git+https://github.com/allyourcodebase/SDL#0466e880e600b091940913b23d926d5ec5cfdec2",
-            .hash = "122049871919faf5a46bb26f1664dc140f9fecdec0d7116ccbf536dc3379738e2096",
+        .SDL = .{
+            .url = "git+https://github.com/allyourcodebase/SDL#6f426d8f1bfbc796ff41e6fda2890790ed34f2c7",
+            .hash = "SDL-2.32.2-JToi31GUEgGOf7m8tPCktmPE1Z0cO8bfst98IDm6xJw4",
         },
-        .sdl_image = .{
+        .SDL_image = .{
             .url = "git+https://github.com/libsdl-org/SDL_image#release-2.8.4",
-            .hash = "12201b123429d79e357e42f771ff2af943c2939150eb93713282c5b1b3da6d2379c6",
+            .hash = "N-V-__8AAGkr2wEbEjQp1541fkL3cf8q-UPCk5FQ65NxMoLF",
         },
     },
     .paths = .{

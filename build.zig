@@ -4,16 +4,20 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const upstream = b.dependency("sdl_image", .{});
+    const upstream = b.dependency("SDL_image", .{});
 
-    const lib = b.addStaticLibrary(.{
+    const lib = b.addLibrary(.{
         .name = "SDL2_image",
-        .target = target,
-        .optimize = optimize,
+        .version = .{ .major = 2, .minor = 8, .patch = 4 },
+        .linkage = .static,
+        .root_module = b.createModule(.{
+            .target = target,
+            .optimize = optimize,
+            .link_libc = true,
+        }),
     });
-    lib.linkLibC();
 
-    const sdl_dep = b.dependency("sdl", .{
+    const sdl_dep = b.dependency("SDL", .{
         .target = target,
         .optimize = optimize,
     });
