@@ -68,6 +68,12 @@ pub fn build(b: *std.Build) void {
         .files = srcs,
     });
 
+    if (target.result.os.tag == .macos) {
+        lib.addCSourceFile(.{
+            .file = upstream.path("src/IMG_ImageIO.m"),
+        });
+    }
+
     lib.installHeader(upstream.path("include/SDL_image.h"), "SDL2/SDL_image.h");
 
     b.installArtifact(lib);
