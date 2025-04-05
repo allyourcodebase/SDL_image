@@ -66,6 +66,12 @@ pub fn build(b: *std.Build) void {
         .files = srcs,
     });
 
+    if (target.result.os.tag == .macos) {
+        lib.addCSourceFile(.{
+            .file = upstream.path("src/IMG_ImageIO.m"),
+        });
+    }
+
     lib.installHeadersDirectory(upstream.path("include"), "", .{});
 
     b.installArtifact(lib);
