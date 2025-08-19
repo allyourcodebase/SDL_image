@@ -3,6 +3,8 @@ const std = @import("std");
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
+    const sanitize_c_type = @typeInfo(@FieldType(std.Build.Module.CreateOptions, "sanitize_c")).optional.child;
+    const sanitize_c = b.option(sanitize_c_type, "sanitize-c", "Detect undefined behavior in C");
 
     const upstream = b.dependency("SDL_image", .{});
 
@@ -14,6 +16,7 @@ pub fn build(b: *std.Build) void {
             .target = target,
             .optimize = optimize,
             .link_libc = true,
+            .sanitize_c = sanitize_c,
         }),
     });
 
