@@ -1,6 +1,6 @@
 .{
     .name = .SDL_image,
-    .version = "3.2.4",
+    .version = "3.2.6",
     .fingerprint = 0x7d6df3671d68a2f9,
     .minimum_zig_version = "0.15.1",
     .dependencies = .{
@@ -9,8 +9,8 @@
             .hash = "sdl-0.3.3+3.2.28-7uIn9MiRfwFhqxnwBi_vCQlKr82YpwkQBVwdz2uy46S1",
         },
         .SDL_image = .{
-            .url = "git+https://github.com/libsdl-org/SDL_image#release-3.2.4",
-            .hash = "N-V-__8AAJB7IgJ65BPSqjqzt7j-5xKDklR0h8c11T60iemj",
+            .url = "git+https://github.com/libsdl-org/SDL_image?ref=release-3.2.6#d78dd65454f442bfdbc373201165f1ef579484ab",
+            .hash = "N-V-__8AAO_mIwJEEqytojZd7n8a-CTtIEGclwow6V8_giVU",
         },
     },
     .paths = .{
