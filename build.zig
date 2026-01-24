@@ -17,7 +17,7 @@ pub fn build(b: *std.Build) void {
 
     const lib = b.addLibrary(.{
         .name = "SDL3_image",
-        .version = .{ .major = 3, .minor = 2, .patch = 6 },
+        .version = .{ .major = 3, .minor = 4, .patch = 0 },
         .linkage = .static,
         .root_module = mod,
     });
@@ -87,9 +87,13 @@ pub fn build(b: *std.Build) void {
 const srcs: []const []const u8 = &.{
     "IMG.c",
     "IMG_WIC.c",
+    "IMG_ani.c",
+    "IMG_anim_encoder.c",
+    "IMG_anim_decoder.c",
     "IMG_avif.c",
     "IMG_bmp.c",
     "IMG_gif.c",
+    "IMG_gpu.c",
     "IMG_jpg.c",
     "IMG_jxl.c",
     "IMG_lbm.c",
@@ -105,4 +109,5 @@ const srcs: []const []const u8 = &.{
     "IMG_xcf.c",
     "IMG_xpm.c",
     "IMG_xv.c",
+    "IMG_libpng.c",
 };
