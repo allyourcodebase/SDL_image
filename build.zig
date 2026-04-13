@@ -17,7 +17,7 @@ pub fn build(b: *std.Build) void {
 
     const lib = b.addLibrary(.{
         .name = "SDL2_image",
-        .version = .{ .major = 2, .minor = 8, .patch = 4 },
+        .version = .{ .major = 2, .minor = 8, .patch = 10 },
         .linkage = .static,
         .root_module = mod,
     });
