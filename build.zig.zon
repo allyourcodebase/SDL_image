@@ -1,16 +1,16 @@
 .{
     .name = .SDL_image,
-    .version = "3.4.0",
+    .version = "3.4.2",
     .fingerprint = 0x7d6df3671d68a2f9,
     .minimum_zig_version = "0.15.1",
     .dependencies = .{
         .SDL = .{
-            .url = "git+https://github.com/castholm/sdl?ref=v0.4.0+3.4.0#ae5deb068787bd71d9aadbc054ff1af54f5d058c",
-            .hash = "sdl-0.4.0+3.4.0-SDL--u6yowGyvoiJ5qkFm_T1-MpmvnHShh2q2mTZf1fo",
+            .url = "git+https://github.com/castholm/sdl#c5ba24c694b5d520cdc1d029d8def398690d6894",
+            .hash = "sdl-0.4.2+3.4.4-SDL--kB3pQHKG_4zWG-pH04ZcZZj_IRF7dwMpxNVGwd6",
         },
         .SDL_image = .{
-            .url = "git+https://github.com/libsdl-org/SDL_image?ref=release-3.4.0#ad58ecfc27a1bd09e510ceff8bbbdb1094806476",
-            .hash = "N-V-__8AAKMTOAIaliYTn2bSPdgsU3aMgqzQiw5nYLBMIUY3",
+            .url = "git+https://github.com/libsdl-org/SDL_image?ref=release-3.4.2#96a73a551a857b7c8d0ca3cc553a266eabbab6a7",
+            .hash = "N-V-__8AAKw2OAIBE6tXk86tafcn1HB_IM24yZSVto6OCxs6",
         },
     },
     .paths = .{
