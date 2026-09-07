@@ -9,6 +9,7 @@
             .hash = "sdl-1.0.2+3.4.16-i4QD0fCvqQBBggvApPLDHmSCoZSBDZALnEyM9m_-CQXY",
         },
         .SDL_image = .{
+            .version = "3.4.4",
             .url = "git+https://github.com/libsdl-org/SDL_image?ref=release-3.4.4#bec9134a26c7d0f31b36d6083c25296e04cabff5",
             .hash = "N-V-__8AAOXTNwLsafFLlfxrVCe4uI4cMt_vtROScH5btrCp",
         },

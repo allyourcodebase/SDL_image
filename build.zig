@@ -1,6 +1,7 @@
 const std = @import("std");
+const build_zon = @import("build.zig.zon");
 
-pub fn build(b: *std.Build) void {
+pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
     const sanitize_c_type = @typeInfo(@FieldType(std.Build.Module.CreateOptions, "sanitize_c")).optional.child;
@@ -17,7 +18,7 @@ pub fn build(b: *std.Build) void {
 
     const lib = b.addLibrary(.{
         .name = "SDL3_image",
-        .version = .{ .major = 3, .minor = 4, .patch = 4 },
+        .version = try std.SemanticVersion.parse(build_zon.dependencies.SDL_image.version),
         .linkage = .static,
         .root_module = mod,
     });
