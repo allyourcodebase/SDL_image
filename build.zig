@@ -37,6 +37,8 @@ pub fn build(b: *std.Build) !void {
     // The following are options for supported file formats. AVIF, JXL, TIFF,
     // and WebP are not yet supported by this build script, as they require
     // additional dependencies.
+    if (b.option(bool, "enable-ani", "Support loading ANI cursors") orelse true)
+        mod.addCMacro("LOAD_ANI", "");
     if (b.option(bool, "enable-bmp", "Support loading BMP images") orelse true)
         mod.addCMacro("LOAD_BMP", "");
     if (b.option(bool, "enable-gif", "Support loading GIF images") orelse true)
