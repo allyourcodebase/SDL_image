@@ -5,8 +5,8 @@
     .minimum_zig_version = "0.16.0",
     .dependencies = .{
         .SDL = .{
-            .url = "git+https://github.com/allyourcodebase/SDL.git?ref=1.0.2+3.4.16#540fe66af2ca5050fc1aabdf7a19cf462ea0312e",
-            .hash = "sdl-1.0.2+3.4.16-i4QD0fCvqQBBggvApPLDHmSCoZSBDZALnEyM9m_-CQXY",
+            .url = "git+https://github.com/allyourcodebase/SDL.git?ref=1.0.3+3.4.16#c96b7ae3985139cbe1298dd405ae1d145640ab05",
+            .hash = "sdl-1.0.3+3.4.16-i4QD0VwGqgDmmhfOmpwPL3MnU2bKAwYkLxFO3NvpBw4w",
         },
         .SDL_image = .{
             .version = "3.4.6",
